@@ -215,7 +215,7 @@ export default class MapViewNavigation extends Component {
      */
     updatePosition(coordinate, duration = 0)
     {
-        this.props.map().animateCamera(coordinate, duration);
+        this.props.map().animateToCoordinate(coordinate, duration);
     }
 
     /**
@@ -225,7 +225,7 @@ export default class MapViewNavigation extends Component {
      */
     updateBearing(bearing, duration = false)
     {
-        this.props.map().animateCamera(bearing, duration || this.props.animationDuration);
+        this.props.map().animateToBearing(bearing, duration || this.props.animationDuration);
     }
 
     /**

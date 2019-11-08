@@ -46,7 +46,9 @@ export default class ManeuverView extends Component {
         arrowColor: '#545455',
         withCloseButton: false,
         onClose: undefined,
-        onPress: undefined,
+        onPress: function(){
+            return null
+        },
     }
 
 
@@ -76,7 +78,7 @@ export default class ManeuverView extends Component {
         const maneuver = step.maneuver;
 
         return (
-            <TouchableOpacity style={styles.maneuverView}>
+            <TouchableOpacity style={styles.maneuverView} onPress={() => this.props.onPress()}>
                 <View style={styles.maneuverViewArrow}>
                     <ManeuverArrow
                         size={this.props.arrowSize}
