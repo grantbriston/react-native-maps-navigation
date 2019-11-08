@@ -295,7 +295,12 @@ export default class MapViewNavigation extends Component {
      */
     clearRoute()
     {
-        this.setState({route: false, step: false, stepIndex: false})
+        this.setState({
+            route: false, 
+            step: false, 
+            stepIndex: false,
+            navigationMode: NavigationModes.IDLE
+        })
     }
 
     /**
